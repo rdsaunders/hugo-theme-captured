@@ -1,0 +1,20 @@
+[instagramFollow]
+other = "Follow me on Instagram"
+
+[twitterFollow]
+other = "Follow me on Twitter"
+
+[unsplashFollow]
+other = "Find me on Unsplash"
+
+[500pxFollow]
+other = "Follow me on 500px"
+
+[exposureSubscribe]
+other = "Subscribe to my stories on Exposure"
+
+[copyright]
+other = "Copyright"
+
+[footnotes]
+other = "Footnotes:"

@@ -1,0 +1,13 @@
+{{ define "main"}}
+
+This is the list template
+
+<ul>
+        {{ range .Pages }}
+        <li>
+            <a href="{{.Permalink}}">{{.Title}}</a>
+        </li>
+        {{ end }}
+    </ul>
+
+{{ end }}

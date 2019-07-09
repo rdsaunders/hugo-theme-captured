@@ -1,0 +1,55 @@
+{{ define "main"}}
+
+<article>
+    <header>
+        <h1>[Title]{{ .Title}}</h1>
+        
+        {{ with .Param "subtitle" }}
+        <h2>[Subtitle]{{ . }}</h2>
+        {{ end }}
+
+        {{ with .Param "location" }}
+        <div>[Location Icon] {{ . }}</div>
+        {{ end }}
+
+        <time>[Date]{{ .Date.Format "January 2, 2006" }}</time>
+    </header>
+
+    {{/*  Uses forestry blocks feature  */}}
+
+    {{ range .Params.page_sections }}
+        {{ if eq "title" .template }}
+            {{ partial "blocks/block-title" . }}
+        {{ end }}
+        {{ if eq "title-subtitle" .template }}
+            {{ partial "blocks/block-title-subtitle" . }}
+        {{ end }}
+        {{ if eq "text" .template }}
+            {{ partial "blocks/block-text" . }}
+        {{ end }}
+        {{ if eq "quote" .template }}
+            {{ partial "blocks/block-quote" . }}
+        {{ end }}
+        {{ if eq "title-photo" .template }}
+            {{ partial "blocks/block-photo-title" . }}
+        {{ end }}
+        {{ if eq "single-photo" .template }}
+            {{ partial "blocks/block-photo-single" . }}
+        {{ end }}
+        {{ if eq "two-column-photo" .template }}
+         {{ partial "blocks/block-photo-two-column" . }}
+        {{ end }}
+        {{ if eq "three-column-photo" .template }}
+            {{ partial "blocks/block-photo-three-column" . }}
+        {{ end }}
+        {{ if eq "footnotes" .template }}
+            {{ partial "blocks/block-footnotes" . }}
+        {{ end }}
+    {{ end }}
+
+</article>
+
+
+{{ partial "pagination.html" . }}
+
+{{ end }}

@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<article>
+    <header>{{ .Title}}</header>
+    <figure>
+        <img src="{{ $.Params.photo.image }}" alt="{{ $.Params.photo.alttext }}">
+		{{ with .Param "photo.caption" }}
+			<figcaption>{{ . }}</figcaption>
+		{{ else }}
+			{{ .Description }}
+		{{ end }}
+    </figure>
+    <footer>
+        <time>{{ .Date.Format "January 2, 2006" }}</time>
+        <div class="location">{{ $.Params.photo.location }}</div>
+    </footer>
+</article>
+
+{{ partial "pagination.html" . }}
+
+
+{{ end }}

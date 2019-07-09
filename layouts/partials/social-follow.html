@@ -1,0 +1,36 @@
+<nav>
+  {{ with .Param "instagram" }}
+  <a href="https://instagram.com/{{ . }}" target="_blank" rel="external noopener">
+      <span class="sr-only">{{ i18n "instagramFollow" }}</span>
+      SVG
+  </a>
+  {{ end }}
+
+  {{ with .Param "twitter" }}
+  <a href="https://twitter.com/{{ . }}" target="_blank" rel="external noopener">
+      <span class="sr-only">{{ i18n "twitterFollow" }}</span>
+      SVG
+  </a>
+  {{ end }}
+
+  {{ with .Param "unsplash" }}
+  <a href="https://unsplash.com/@{{ . }}" target="_blank" rel="external noopener">
+      <span class="sr-only">{{ i18n "unsplashFollow" }}</span>
+      SVG
+  </a>
+  {{ end }}
+
+  {{ with .Param "500px" }}
+  <a href="https://500px.com/{{ . }}" target="_blank" rel="external noopener">
+      <span class="sr-only">{{ i18n "500pxFollow" }}</span>
+      SVG
+  </a>
+  {{ end }}
+
+  {{ with .Param "exposure" }}
+  <a href="https://{{ . }}.exposure.co" target="_blank" rel="external noopener">
+      <span class="sr-only">{{ i18n "exposureSubscribe" }}</span>
+      SVG
+  </a>
+  {{ end }}
+</nav>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='{{ $.Site.LanguageCode | default "en" }}'>
+  <head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="robots" content="index, follow">
+ 
+
+    <!-- todo: Stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <!-- todo: Favicon Partial -->
+
+    <!-- todo: RSS -->
+
+    <!-- todo: Google Analytics Partial -->
+
+  </head>
+
+  <body>
+
+    {{ block "header" . }}
+        {{ partial "site-header.html" .}}
+    {{end}}        
+
+    <main>
+        {{ block "main" . }}
+       
+        {{end}}
+    </main>
+
+    {{ block "footer" . }}
+        {{ partial "site-footer.html" .}}
+    {{end}}
+
+
+  </body>
+</html>

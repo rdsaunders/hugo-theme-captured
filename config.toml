@@ -1,0 +1,13 @@
+title = "Richard Saunders"
+description = "This is the site description"
+baseURL = "/"
+languageCode = "en"
+[permalinks]
+  photos = "/:year/:month/:title/"
+  stories = "/stories/:year/:title/"
+[params]
+  twitter = "rdsaunders"
+  instagram = "richardsaunders"
+  unsplash = "rdsaunders"
+  500px = "rdsaunders"
+  exposure = "rdsaunders"

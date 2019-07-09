@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<h2>Photos</h2>
+<ul itemscope itemtype="http://schema.org/ImageGallery">
+    {{ range where .Pages "Section" "photos" }}
+    <li>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="{{.Permalink}}" itemprop="contentUrl">
+                <img src="{{ .Params.photo.image }}" itemprop="thumbnail" alt="{{ .Params.photo.alttext }}" />
+            </a>
+        </figure>
+    </li>
+    {{ end }}
+</ul>
+
+
+<aside>
+    <h2>Stories</h2>
+    <ul>
+        {{ range where .Pages "Section" "stories" }}
+        <li>
+            <a href="{{.Permalink}}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</aside>
+
+{{ end }}
+

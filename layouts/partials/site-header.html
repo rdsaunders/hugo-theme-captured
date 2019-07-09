@@ -1,0 +1,14 @@
+<header>
+    
+    <h1>
+        <a href="{{ .Site.BaseURL }}">{{ .Site.Title}}</a>
+    </h1>
+    
+    {{ with .Param ".Site.description" }}
+    <p>{{ .Site.description }}</p>
+    {{ end }}  
+
+
+    {{ partial "site-navigation.html" . }}
+    
+</header>

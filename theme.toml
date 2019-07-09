@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Captured"
+license = "MIT"
+licenselink = "Link to theme's license"
+description = "Captured is a photo blog and story theme for the Hugo static site generator."
+homepage = "https://github.com/rdsaunders/hugo-theme-captured"
+tags = ["blog", "photos", "stories", "responsive", "multilingual"]
+features = ["posts", "stories", "categories", "tags"]
+min_version = 0.38
+
+[author]
+    name = "Richard Saunders"
+    homepage = "https://github.com/rdsaunders"
